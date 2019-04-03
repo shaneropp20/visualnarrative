@@ -11,16 +11,6 @@
 </script>
 
 
-<button id="button" onclick="playVid()" type="button">Play Video</button>
-<style>
-    #button{
-        position: absolute;
-        bottom: 10%;
-    left: 45%;
-    width: 10%;}
-</style>
-
-
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
 <script>
@@ -330,7 +320,10 @@ THREEx.Portal360.prototype.update = function () {
 </script>
 
 <body style='margin : 0px; overflow: hidden;'>
-  <a-scene arjs="debugUIEnabled: false;" embedded arjs='trackingMethod: best;'>
+    <a-scene arjs="debugUIEnabled: false;" embedded arjs='trackingMethod: best;'>
+        <a-assets>
+            <video autoplay src="https://shaneropp20.github.io/visualnarrative/first.mp4"></video>
+        </a-assets>
   
 		<!-- Create a anchor to attach your augmented reality -->
 		<a-anchor hit-testing-enabled='true'>
@@ -340,7 +333,7 @@ THREEx.Portal360.prototype.update = function () {
 
 			<!-- portal 360 with an video -->
 			<!-- <a-portal-door url='videos/pano.webm' position='0 0 0' scale='2 2 2' rotation='0 90 0'><a-portal-door> -->
-			<a-portal-door id="myvid" url='https://shaneropp20.github.io/visualnarrative/first.mp4' position='-1.5 1 0' scale='5 5 5' rotation='-90 0 0'><a-portal-door>
+			<a-portal-door url='https://shaneropp20.github.io/visualnarrative/first.mp4' position='-1.5 1 0' scale='5 5 5' rotation='-90 0 0'><a-portal-door>
 
 		</a-anchor>
 
