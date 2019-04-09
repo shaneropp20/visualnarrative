@@ -176,8 +176,7 @@
                     // var radius360Sphere = 1
                 var geometry = new THREE.SphereGeometry(radius360Sphere, 16, 16).rotateZ(Math.PI)
                 var material = new THREE.MeshBasicMaterial({
-                    map: texture360
-                    , // opacity: 0.9,
+                    map: texture360, // opacity: 0.9,
                     side: THREE.DoubleSide
                 , });
                 // var material = new THREE.MeshNormalMaterial()
@@ -215,8 +214,7 @@
                 })
                 geometry.uvsNeedUpdate = true
                 var material = new THREE.MeshBasicMaterial({
-                    map: texture360
-                    , // opacity: 0.9,
+                    map: texture360, // opacity: 0.9,
                     side: THREE.BackSide
                 , });
                 // var geometry = new THREE.SphereGeometry( radius360Sphere, 16, 16);
@@ -277,13 +275,14 @@
     </script>
     <a-scene arjs="debugUIEnabled: false;" embedded arjs='trackingMethod: best;'>
         <a-assets>
-            <image class="content" src="farm.png"></image>
-        </a-assets> 
+            <image class="content" src="farm.jpg"></image>
+        </a-assets>
         <a-anchor hit-testing-enabled='true'>
-            <a-portal-door url='farm.png' position='-1.5 1 0' scale='5 5 5' rotation='-90 0 0'>
-                <a-portal-door> </a-anchor>
-        <!-- Define a static camera -->
-        <a-camera-static/> </a-scene>
+            <a-anchor hit-testing-enabled='true'>
+                <a-portal-door url='farm.jpg' position='-1.5 1 0' scale='5 5 5' rotation='-90 0 0'>
+                    <a-portal-door> </a-anchor>
+            <!-- Define a static camera -->
+            <a-camera-static/> </a-scene>
 </body>
 
 </html>
